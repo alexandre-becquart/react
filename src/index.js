@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+//import Storepicker from './components/storepicker';
+import App from './components/app';
+import Router from './components/router'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import "./css/style.css";
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// ReactDOM.render(< Storepicker />, document.getElementById('main'));
+//ReactDOM.render(< App />, document.getElementById('main'));
+ReactDOM.render(< Router />, document.getElementById('main'));
