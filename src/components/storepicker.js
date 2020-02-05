@@ -5,7 +5,7 @@ import { getFunName } from '../helpers'
 
 class StorePicker extends Component {
 
-    myInput = React.createRef();
+    myInput = React.createRef(); // permet de créer une ref
 
     // constructor() {
     //     super();
@@ -25,6 +25,19 @@ class StorePicker extends Component {
     render() {
 
         return (
+
+            <form className="store-selector" onSubmit={this.gotoStore}>
+                <h2>Please Enter a Store</h2>
+                {/* <button onClick={this.handleClick}>Click Me</button> */}
+                <input
+                    type="text"
+                    ref={this.myInput}
+                    required
+                    placeholder="Store name"
+                    defaultValue={getFunName()} />
+                <button type='submit'>Visite Store</button>
+            </form>
+
 
             // <section className="code">
             //     <div>test</div>
@@ -48,17 +61,6 @@ class StorePicker extends Component {
             /* -------------------------------------------------------------------------- */
 
 
-            <form className="store-selector" onSubmit={this.gotoStore}>
-                <h2>Please Enter a Store</h2>
-                {/* <button onClick={this.handleClick}>Click Me</button> */}
-                <input
-                    type="text"
-                    ref={this.myInput}
-                    required
-                    placeholder="Store name"
-                    defaultValue={getFunName()} />
-                <button type='submit'>Visite Store</button>
-            </form>
 
         )
     }
